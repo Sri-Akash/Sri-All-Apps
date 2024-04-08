@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Applications</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <nav>
+                <img src="../Assets/logo.png" alt="Sri_Logo" />
+                <h1>Sri Applications</h1>
+                <ul>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="#services">
+                        <li>Services</li>
+                    </a>
+                    <a href="#features">
+                        <li>Features</li>
+                    </a>
+                    <a href="#about">
+                        <li>About</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+
+        <h1 class="top_heading">Applications</h1>
+        <section class="app_holder">
+            <div class="app1">
+                <img src="../Assets/P1.png" alt="Calculator"><a target="_blank"
+                    href="https://sri-akash.github.io/Interactive-Calculator/" class="anchor">Preview</a>
+                <h1>Title : </h1>
+                <p>Calculator</p>
+                <h1>Description : </h1>
+                <p>Introducing our innovative Calculator App, meticulously crafted with HTML, CSS, and
+                    JavaScript. Seamlessly combining sleek design with robust functionality, our app offers a
+                    user-friendly interface for effortless calculations.
+                </p>
+            </div>
+
+            <div class="app1">
+                <img src="../Assets/P6.png" alt="Traveling Site"><a target="_blank"
+                    href="https://sri-akash.github.io/Travelling-Site/" class="anchor">Preview</a>
+                <h1>Title : </h1>
+                <p>Static Travell Site</p>
+                <h1>Description : </h1>
+                <p>
+                    Embark on a virtual journey with our Static Travel Site, crafted with HTML, CSS, and JavaScript.
+                    Immerse yourself in captivating destinations, stunning imagery, and informative content, all
+                    seamlessly woven together to inspire your next adventure. Explore destinations, plan itineraries,
+                    and ignite your wanderlust with our user-friendly interface.
+                </p>
+            </div>
+
+            <div class="app1">
+                <img src="../Assets/P3.png" alt="Text To Speech"><a target="_blank"
+                    href="https://sri-akash.github.io/TextToSpeech/" class="anchor">Preview</a>
+                <h1>Title : </h1>
+                <p>Text To Speech</p>
+                <h1>Description : </h1>
+                <p>Experience seamless conversion of text to lifelike speech with our Text-to-Speech web application.
+                    Built using HTML, CSS, and JavaScript, our app delivers clear and natural audio output, enhancing
+                    accessibility and convenience for users across various platforms.
+                </p>
+            </div>
+
+            <div class="app1">
+                <img src="../Assets/P7.png" alt="Digital Clock"><a target="_blank"
+                    href="https://sri-akash.github.io/Digital-Clock/" class="anchor">Preview</a>
+                <h1>Title : </h1>
+                <p>Digital Clock</p>
+                <h1>Description : </h1>
+                <p>Experience time in a whole new light with our Digital Clock. Crafted using HTML, CSS, and JavaScript,
+                    this sleek and minimalist clock offers precision and functionality. Whether you're tracking the
+                    seconds or simply admiring its modern design, our Digital Clock is the perfect addition to any
+                    digital workspace or website.
+                </p>
+            </div>
+
+
+            <div class="app1">
+                <img src="../Assets/P4.png" alt="Canvas"><a target="_blank"
+                    href="https://sri-akash.github.io/Implement-Canvas/" class="anchor">Preview</a>
+                <h1>Title : </h1>
+                <p>Canvas</p>
+                <h1>Description : </h1>
+                <p>Unleash your creativity with our Canvas Implementation app, crafted with HTML, CSS, and JavaScript.
+                    Dive into the world of digital artistry as you bring your ideas to life on the canvas, exploring a
+                    myriad of design possibilities with intuitive tools and dynamic features.
+                </p>
+            </div>
+
+            <div class="app1">
+                <img src="../Assets/P5.png" alt="Image Manipulation"><a target="_blank"
+                    href="https://sri-akash.github.io/Image-Manipulation/" class="anchor">Preview</a>
+                <h1>Title : </h1>
+                <p>Image Manipulation</p>
+                <h1>Description : </h1>
+                <p>Transform your images with ease using our Image Manipulation app, meticulously crafted with HTML,
+                    CSS, and JavaScript. Enhance, edit, and manipulate your photos effortlessly, unleashing your
+                    creativity and giving your visuals a professional touch. Explore a range of editing tools and
+                    effects to bring your vision to life.
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let anchor = document.querySelectorAll('.anchor')
+    for (let a of anchor) {
+        a.style.display = "none"
+    }
+
+    let apps = document.querySelectorAll('.app1')
+
+    for (const app of apps) {
+        app.addEventListener('mouseover', function () {
+            app.children[1].style.display = "block"
+            app.children[1].style.transition = "0.5s"
+        })
+
+        app.addEventListener('mouseleave', function () {
+            app.children[1].style.display = "none"
+            app.children[1].style.transition = "0.5s"
+        })
+    }
+</script>

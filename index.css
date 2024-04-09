@@ -47,6 +47,7 @@ nav img {
 
 nav h1 {
   margin: auto;
+  margin-left: 10px;
   font-weight: 600;
   font-size: 30px;
   color: #f21600;
@@ -61,6 +62,10 @@ ul {
   justify-content: flex-end;
 }
 
+ul h1{
+  display: none;
+}
+
 a {
   text-decoration: none;
   color: #f21600;
@@ -69,7 +74,7 @@ a {
   scroll-behavior: smooth;
 }
 
-a:hover {
+.active, a:hover {
   transition: 0.3s;
   color: #f21600;
   font-weight: 700;
@@ -128,4 +133,50 @@ a:hover {
   border-radius: 10px;
   float: right;
 }
+@media (max-width: 1081px){
+  nav h1{
+    font-size: 18px;
+    width: 50%;
+  }
 
+  a{
+    padding: 0 2%;
+  }
+}
+
+@media (max-width: 600px) {
+
+  nav{
+    padding: 8px 20px;
+  }
+
+  nav h1{
+    display: none;
+  }
+
+  ul{
+    width: 100% auto;
+  }
+  
+  a{
+    margin: auto;
+  }
+}
+
+@media (max-width: 440px) {
+  ul h1{
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  ul a{
+    display: none;
+  }
+
+  .app1{
+    width: 75%;
+  }
+}

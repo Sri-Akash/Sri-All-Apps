@@ -16,19 +16,20 @@
             <nav>
                 <img src="logo.png" alt="Sri_Logo" />
                 <h1>Sri Applications</h1>
-                <ul>
-                    <a href="index.html">
-                        <li>Home</li>
+                <ul id="menu">
+                    <a href="https://sri-akash.github.io/Portfolio/" class="menu_items">
+                        <li>Portfolio Site</li>
                     </a>
-                    <a href="#services">
+                    <a href="#services" class="menu_items">
                         <li>Services</li>
                     </a>
-                    <a href="#features">
-                        <li>Features</li>
+                    <a href="index.html" class="menu_items active">
+                        <li>Applications</li>
                     </a>
-                    <a href="#about">
+                    <a href="#about" class="menu_items">
                         <li>About</li>
                     </a>
+                    <h1>Sri Applications</h1>
                 </ul>
             </nav>
         </header>
@@ -88,8 +89,8 @@
 
 
             <div class="app1">
-                <img src="P4.png" alt="Canvas"><a target="_blank"
-                    href="https://sri-akash.github.io/Implement-Canvas/" class="anchor">Preview</a>
+                <img src="P4.png" alt="Canvas"><a target="_blank" href="https://sri-akash.github.io/Implement-Canvas/"
+                    class="anchor">Preview</a>
                 <h1>Title : </h1>
                 <p>Canvas</p>
                 <h1>Description : </h1>
@@ -118,6 +119,7 @@
 </html>
 
 <script>
+    //code for preview button
     let anchor = document.querySelectorAll('.anchor')
     for (let a of anchor) {
         a.style.display = "none"
@@ -135,5 +137,16 @@
             app.children[1].style.display = "none"
             app.children[1].style.transition = "0.5s"
         })
+    }
+
+    //code for menu items
+    var header = document.getElementById("menu");
+    var btns = header.getElementsByClassName("menu_items");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
     }
 </script>
